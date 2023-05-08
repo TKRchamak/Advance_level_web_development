@@ -3,3 +3,4 @@ const money: number = 120;
 
 console.log(course);
 console.log(money);
+console.log("this for test")
