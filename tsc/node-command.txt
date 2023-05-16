@@ -1,0 +1,16 @@
+** command
+
+0. npm install typescript --save-dev ----> for install ts
+
+1. tsc file_dir.ts ----> convert ts file to js file
+2. node file_dir.js ----> run js file
+3. tsc --init ----> for create tsconfig.json file
+4. npm init -y ----> for create package.json file
+5. npm i -D nodemon ----> install nodemon as a dev-dependency for runtime serve
+6. set "start" : "nodemon index.js" ---> if update inde.js file that run the updated index.js file
+    // that system have problem for .ts file, .ts file dose not update automatically 
+7. npm i ts-node-dev ----> for auto convert ts file to js file
+8. set "start" : "ts-node-dev --respawn --transpile-only server.ts" 
+    ---> update ts file and run the 
+9. set root dir in tsconfig file "rootDir":"./src"
+10. set output dir in tsconfig file "outDir":"./dist"
