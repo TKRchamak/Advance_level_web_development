@@ -16,8 +16,8 @@ const personObj: personType = {
     address: 'sindurmoti, lalmonirhur'
 }
 
-type personTypes = 'name' | 'age' | 'address';
-type personTypesUsingKeyof = keyof personType;
+type personTypes = 'name' | 'age' | 'address'; // manually korci
+type personTypesUsingKeyof = keyof personType; // same jinis keyof dia kora hoyece
 
 
 // X er vitore j property gulo thakbe er modhe j kono akta value X hisebe dite hobe
