@@ -45,7 +45,7 @@ const objq: {
     occupation: 'developer',
     balance: 20,
     addMoney(money1: number): string {
-        this.balance += money;
+        this.balance += money1;
         return `This my new money ${this.balance + money1}`
     },
     getMoney(): void {
@@ -78,3 +78,14 @@ console.log({ string });
 //  ===> its like spread operator but working on reverse.
 const greedFriend = (...friends: string[]): void => console.log(friends);
 greedFriend('d', 'g', 'd', 's', 'r');
+
+
+function generateAdder(a: number): (b: number) => number { // [(b: number) => number] ----> this is inner function type
+    return function (b: number) {
+        return a + b;
+    };
+}
+
+const addTwo = generateAdder(2);
+console.log(addTwo(3));
+console.log(addTwo(5));

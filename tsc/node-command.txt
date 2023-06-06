@@ -7,7 +7,7 @@
 3. tsc --init ----> for create tsconfig.json file
 4. npm init -y ----> for create package.json file
 5. npm i -D nodemon ----> install nodemon as a dev-dependency for runtime serve
-6. set "start" : "nodemon index.js" ---> if update inde.js file that run the updated index.js file
+6. set "start" : "nodemon index.js" ---> if update index.js file that run the updated index.js file
     // that system have problem for .ts file, .ts file dose not update automatically 
 7. npm i ts-node-dev ----> for auto convert ts file to js file
 8. set "start" : "ts-node-dev --respawn --transpile-only server.ts" 
