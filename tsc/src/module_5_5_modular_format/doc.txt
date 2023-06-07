@@ -1,0 +1,6 @@
+--> two way to create modular format
+    --> es format
+    --> common js format
+
+    -> amd
+    -> umd

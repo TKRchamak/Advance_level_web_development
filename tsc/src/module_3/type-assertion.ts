@@ -12,13 +12,13 @@ amni = "this is a string";
 <string>amni.toLocaleLowerCase(); // this is the another way ,,, but it dose not work is tsx ,,,
 
 
-function kgToGram(param:string | number):string|number|undefined{
-    if(typeof param === "string"){
-        const value = parseFloat(param)*1000;
+function kgToGram(param: string | number): string | number | undefined {
+    if (typeof param === "string") {
+        const value = parseFloat(param) * 1000;
         return `The Converted result is : ${value}`;
     }
-    if(typeof param === "number"){
-        const value = param*1000;
+    if (typeof param === "number") {
+        const value = param * 1000;
         return value;
     }
 }
@@ -32,11 +32,11 @@ const resultToString = kgToGram("1000") as string;
 
 
 // --- in type try catch ---
-type customErrorType ={
+type customErrorType = {
     message: string;
 }
-try{
+try {
 
-}catch(err){
+} catch (err) {
     console.log((err as customErrorType).message);
 }

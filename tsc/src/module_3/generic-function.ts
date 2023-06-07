@@ -45,3 +45,7 @@ const addInObj = <T, D>(obj: T, data: D) => { // typeScript spread operator
 const newObj2 = addInObj(obj4, aaa);
 
 
+// type AddFunc2<T> = (num1: T, num2:T) => T; // more recommended
+// const sumTwo2: AddFunc2<number> = (num1, num2) =>  num1 + num2;
+
+
