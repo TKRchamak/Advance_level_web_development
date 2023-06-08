@@ -4,3 +4,17 @@
 
     -> amd
     -> umd
+
+
+--> in a file create very function and export them  
+
+--> in a file create multiple function and export default{
+        funtion1,
+        funtion2, 
+        funtion3,
+        ...
+    }
+
+--> create utils folder and 
+    create file for every function and export them,
+    make an index file for default export them all (re-export methodology)
