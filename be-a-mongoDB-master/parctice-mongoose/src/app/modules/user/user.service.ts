@@ -20,6 +20,12 @@ export const createUserToDB = async () => {
         presentAddress: "Dhaka",
         permanentAddress: "Dhaka",
     });
+
     await user.save();
     return user;
+}
+
+export const getUsersFromDB = async () => {
+    let users = await User.find();
+    return users;
 }

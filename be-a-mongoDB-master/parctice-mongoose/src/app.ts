@@ -31,8 +31,9 @@ app.use(cors());
 
 // parse data
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }))
-// app.get('/api/v1/user', userRouter);
+app.use(express.urlencoded({ extended: true }));
+
+
 app.use('/api/v1/user', userRouter);
 
 // app.get('/', (req: Request, res: Response, next: NextFunction) => {
