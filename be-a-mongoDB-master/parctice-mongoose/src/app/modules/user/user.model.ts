@@ -20,6 +20,25 @@ const userSchema = new Schema<IUser>({
     permanentAddress: { type: String, required: true, unique: false },
 });
 
+// user data look like this --->
+// const user = awiat new User({
+//     id: "778",
+//     role: "student",
+//     password: "jakanaka",
+//     name: {
+//         firstName: "Suparna",
+//         middleName: "Rani",
+//         lastName: "Debnath",
+//     },
+//     dateOfBirth: "",
+//     gender: "male",
+//     email: "tonmoykumarroy6@gmail.com",
+//     contactNo: "01772536411",
+//     emergencyContactNo: "0158968484",
+//     presentAddress: "Dhaka",
+//     permanentAddress: "Dhaka",
+// });
+
 const User = model<IUser>("User", userSchema);
 
 export default User;

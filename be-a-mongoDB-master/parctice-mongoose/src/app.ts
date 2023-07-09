@@ -33,7 +33,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-
+// Application Router
 app.use('/api/v1/user', userRouter);
 
 // app.get('/', (req: Request, res: Response, next: NextFunction) => {
