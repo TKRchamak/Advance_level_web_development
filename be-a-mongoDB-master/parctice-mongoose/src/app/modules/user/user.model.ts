@@ -1,8 +1,12 @@
-import { Schema, model } from "mongoose";
-import { IUser } from "./user.interface";
+import { Model, Schema, model } from "mongoose";
+import { IUser, IUserMethods, UserModel } from "./user.interface";
+
+// Create a new Model type that knows about IUserMethods...
+// type UserModel = Model<IUser, {}, IUserMethods>;
+
 
 // creating schema using interface
-const userSchema = new Schema<IUser>({
+const userSchema = new Schema<IUser, UserModel, IUserMethods>({
     id: { type: String, required: true, unique: true },
     role: { type: String, required: true, unique: false },
     password: { type: String, required: true, unique: false },
@@ -18,6 +22,15 @@ const userSchema = new Schema<IUser>({
     emergencyContactNo: { type: String, required: true, unique: false },
     presentAddress: { type: String, required: true, unique: false },
     permanentAddress: { type: String, required: true, unique: false },
+});
+
+userSchema.static('getAdminUsers', async function getAdminUsers(): Promise<IUser[]> {
+    const admin = await this.find({ role: "admin" });
+    return admin;
+});
+
+userSchema.method('fullName', function fullName() {
+    return this.name.firstName + ' ' + this.name.lastName;
 });
 
 // user data look like this --->
@@ -39,6 +52,6 @@ const userSchema = new Schema<IUser>({
 //     permanentAddress: "Dhaka",
 // });
 
-const User = model<IUser>("User", userSchema);
+const User = model<IUser, UserModel>("User", userSchema);
 
 export default User;
