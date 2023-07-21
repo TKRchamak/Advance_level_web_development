@@ -7,7 +7,7 @@ export const createUserToDB = async (userData: IUser): Promise<IUser> => {
     const user = new User(userData);
     await user.save();
 
-    console.log(user.fullName());
+    console.log(user.fullName()); // custom instance method
     return user;
 }
 
