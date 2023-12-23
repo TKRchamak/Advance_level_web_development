@@ -1,8 +1,3 @@
-interface Model<IData, IMethod> {
-    data: IData;
-    method: IMethod;
-}
-
 interface IUserNew {
     firstName: string;
     lastName: string;
@@ -10,6 +5,11 @@ interface IUserNew {
 
 interface IMethod {
     fullName(): string
+}
+
+interface Model<IData, IMethod> {
+    data: IData;
+    method: IMethod;
 }
 
 type MyClassModel = Model<IUserNew, IMethod>;

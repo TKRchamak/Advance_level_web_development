@@ -1,0 +1,57 @@
+-> implicit - inference | get type from value. like -- let a = "I am string"; a get the string type by infer.
+-> explicit - which type set by code like -- let a : string  = "I am string"; 
+
+-> Array --if multi-type in array then the type is like -- let a: [string | number | boolean]
+-> tuple -- it take only 2 value in array like -- let a: [string, number] = ['Tonmoy', 28];
+
+--> object 
+    --> readonly
+    --> interface
+
+--> optional property like -- name?: string;
+
+--> function
+
+--> default parameter
+
+--> spread operator
+
+--> name alias like -- change the variable name like let {name: myName}, now the name is called by myName
+
+--> type alias -- create a custom type and use the custom type
+
+--> union type
+--> intersection type like -- create another type with another custom type
+
+--> enum like -- enum Level{
+    junior: 'junior',
+    min: "mid"
+}
+
+--> null
+--> unknown -- get type in run type
+--> never -- not return any thing , but throw error
+
+--> nullish coeslancing operator -- value null or undefine hole default value set korar jonoo use kora hoy 
+    like -- let userType = user.type ?? "normal user";
+
+--> type assertion -- 
+    like: 
+        let emni : any;
+        emni: "string";
+        (emni as string).length;
+
+    for function 
+        const func = (): string | number | boolean  =>{}
+        let data = func(5) as number
+
+--> interface -- only apply able on object type data
+--> extends -- interface IUser extends IPerson{
+    newItem: string;
+}
+
+-- generic interface
+--> generic function
+--> constraints in generic -- in dynamic type must have some property
+
+--> key of -- use for create union type with interface 

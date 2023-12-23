@@ -18,7 +18,7 @@ function add(num1: number, num2: number): number {
 // --- arrow function ---
 const addArrow = (num1: number, num2: number): number => num1 + num2;
 
-const arr = [1, 3, 5, 6];
+const arr: number[] = [1, 3, 5, 6];
 const newArr = arr.map((item: number): number => item * item);
 console.log(newArr);
 
@@ -55,8 +55,8 @@ const objq: {
 
 // spread operator
 //  ==> 
-const myFriends = ["taki", "shanto", "monir", "rafsan"];
-const myNewFriend = ['notun', 'new', 'mamun'];
+const myFriends: string[] = ["taki", "shanto", "monir", "rafsan"];
+const myNewFriend: string[] = ['notun', 'new', 'mamun'];
 
 myFriends.push(...myNewFriend);
 console.log(myFriends);

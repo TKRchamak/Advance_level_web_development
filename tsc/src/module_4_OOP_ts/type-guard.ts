@@ -5,10 +5,10 @@
 */
 
 // <--- keyof guard --->
-type AlphaNeumeric = string | number;
+type AlphaNumeric = string | number;
 
 // function add2(param: string | number, param2: string | number): (string | number) {
-function add2(param: AlphaNeumeric, param2: AlphaNeumeric): (AlphaNeumeric) {
+function add2(param: AlphaNumeric, param2: AlphaNumeric): (AlphaNumeric) {
     if (typeof param === "number" && typeof param2 === "number") {
         return param + param2
     } else {
@@ -126,3 +126,6 @@ function getAnimal(obj: Animal3) {
 
 const animal1 = new Dog2("bool", "dog");
 const animal2 = new Cat2("hulu", "cat");
+
+
+getAnimal(animal1);

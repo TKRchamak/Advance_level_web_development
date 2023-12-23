@@ -2,17 +2,21 @@ class Person {
     name: string;
     occupation: string;
     age: number;
-    address: string;
+    private _address: string;
 
     constructor(name: string, occupation: string, age: number, address: string) {
         this.name = name;
         this.occupation = occupation;
-        this.address = address;
+        this._address = address;
         this.age = age;
     }
 
     makeSleep(time: string): string {
         return `${this.name} sleep at ${time}`;
+    }
+
+    getAddress() {
+        console.log(this._address);
     }
 }
 
@@ -34,3 +38,7 @@ class Teacher extends Person {
         return `Teacher ${this.name} is taken the ${className} class`;
     }
 }
+
+let student1 = new Student('Tonmoy', 'student', 26, 'Dhaka');
+
+console.log(student1);

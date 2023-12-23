@@ -1,5 +1,5 @@
 /*
-==> assertion --> type scrip er theke besi bujhe amra j type dibo oi type nia kaj korbe.
+==> assertion --> typeScrip er theke besi bujhe amra j type dibo oi type nia kaj korbe.
 
     onek gulo type dea thakar poreo ami nije theke stric vabe bole dibo j ai type e nite hobe 
 

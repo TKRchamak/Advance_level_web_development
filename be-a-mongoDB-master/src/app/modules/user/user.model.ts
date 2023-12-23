@@ -22,7 +22,19 @@ const userSchema = new Schema<IUser, UserModel, IUserMethods>({
     emergencyContactNo: { type: String, required: true, unique: false },
     presentAddress: { type: String, required: true, unique: false },
     permanentAddress: { type: String, required: true, unique: false },
-});
+},
+    // { minimize: false, timestamps: true, collection: 'Shops' }
+);
+/*
+minimize option is used within a schema to control whether 
+empty objects (objects with no properties) should be saved in the MongoDB documents or not. 
+When minimize is set to false, Mongoose will store empty objects in the documents, 
+while setting it to true (which is the default) will remove empty objects when saving.
+
+collection: 
+collection name as same as that
+
+*/
 
 userSchema.static('getAdminUsers', async function getAdminUsers(): Promise<IUser[]> {
     const admin = await this.find({ role: "admin" });

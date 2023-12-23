@@ -24,6 +24,7 @@ export interface IUserMethods {
     fullName(): string;
 }
 
+
 // custom static method
 export interface UserModel extends Model<IUser, {}, IUserMethods> {
     getAdminUsers(): Promise<HydratedDocument<IUser, IUserMethods>>;
